@@ -1,3 +1,127 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// shared/header
+
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+
+.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); } 
+
+nav a:hover {
+	text-decoration: none;
+	font-size      : 1.1rem;
+	transition     : all ease 0.2s;
+}
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+  from {
+    -webkit-transform: rotate(0deg);
+    -o-transform     : rotate(0deg);
+    transform        : rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    -o-transform     : rotate(360deg);
+    transform        : rotate(360deg);
+  }
+}
+@keyframes rotating {
+  from {
+    -ms-transform    : rotate(0deg);
+    -moz-transform   : rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform     : rotate(0deg);
+    transform        : rotate(0deg);
+  }
+  to {
+    -ms-transform    : rotate(360deg);
+    -moz-transform   : rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -o-transform     : rotate(360deg);
+    transform        : rotate(360deg);
+  }
+}
+.rotating {
+  -webkit-animation: rotating 2s linear infinite;
+  -moz-animation   : rotating 2s linear infinite;
+  -ms-animation    : rotating 2s linear infinite;
+  -o-animation     : rotating 2s linear infinite;
+  animation        : rotating 2s linear infinite;
+}
+
+.logo-image:hover{
+  -webkit-animation: spin 2s linear infinite;
+  animation        : spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin{
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(-360deg);
+  }
+}
+
+@keyframes spin{
+  from {
+    -moz-transform: rotateY(0deg);
+    -ms-transform : rotateY(0deg);
+    transform     : rotateY(0deg);
+  }
+
+  to {
+    -moz-transform: rotateY(-360deg);
+    -ms-transform : rotateY(-360deg);
+    transform     : rotateY(-360deg);
+  }
+}
+
+footer {
+  padding: 40px 0;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+
+
+.fa:hover {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.social {
+  padding-left: 0.33rem;
+}
+/* Set a specific color for each brand */
+
+.fa-facebook-square {
+  color: #3B5998;
+}
+
+.fa-twitter-square {
+  color: #55ACEE;
+}
+
+.fa-google-plus-square {
+  color: #dd4b39;
+}
+
+.fa-instagram {
+  color: #125688;
+}
+
+footer #social-fb:hover {
+  color: #3B5998;
+}
+footer #social-tw:hover {
+  color: #55ACEE;
+}
+footer #social-gp:hover {
+  color: #dd4b39;
+}
+footer #social-ig:hover {
+  color: #125688;
+}

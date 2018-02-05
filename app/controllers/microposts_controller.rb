@@ -71,4 +71,4 @@ class MicropostsController < ApplicationController
     def micropost_params
       params.require(:micropost).permit(:context, :user_id)
     end
-end
+  end
