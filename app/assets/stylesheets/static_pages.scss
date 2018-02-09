@@ -8,6 +8,15 @@ body {
 } 
 
 
+// main {
+//   width: 100%;
+//   min-height: 100vh;
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   align-items: center;
+// }
+
 // shared/header
 
 .border-top { border-top: 1px solid #e5e5e5; }
@@ -145,6 +154,7 @@ footer #social-ig:hover {
   top: 45%;
   transform: translate(-50%, -50%);
 }
+
 
 :root {
   --input-padding-x: .75rem;
