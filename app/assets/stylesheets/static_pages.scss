@@ -2,6 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// mixins, variables, etc.
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+//miscellaneours
+
+.debug_dump {
+  clear: both;
+  float: left;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+
 html,
 body {
   height: 100%;
