@@ -7,11 +7,6 @@ Things you may want to cover:
 
 * Ruby version
 	2.4.2
-<<<<<<< HEAD
-=======
-
->>>>>>> b08cbf921e9bdfcbd13a9f084208d66c045c6f53
-* System dependencies
 
 * Configuration
 

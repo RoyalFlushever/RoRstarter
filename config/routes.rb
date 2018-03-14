@@ -1,37 +1,39 @@
 Rails.application.routes.draw do
  
-  get 'auth/:provider/callback', to: 'sessions#create'
-  get 'auth/failure', to: redirect('/')
-  get 'signout', to: 'sessions#destroy', as: 'signout'
+  # get 'auth/:provider/callback', to: 'sessions#create'
+  # get 'auth/failure', to: redirect('/')
+  # get 'signout', to: 'sessions#destroy', as: 'signout'
 
-  resources :sessions, only: [:create, :destroy]
-  resource :home, only: [:show]
+  # resources :sessions, only: [:create, :destroy]
+  # resource :home, only: [:show]
 
-  root to: "home#show"
+  root to: 'static_pages#login'
 
- #  get 'sessions/create'
+  get 'sessions/create'
 
- #  get 'sessions/destroy'
+  get 'sessions/destroy'
 
- #  get 'home/show'
+  get 'home/show'
 
- #  get 'users/new'
 
-	# # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-	# root 'static_pages#home'
+	# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+	root 'static_pages#home'
 	
-	# get '/home', to: 'static_pages#home'
+	get '/home', to: 'static_pages#home'
 
-	# get '/login', to: 'static_pages#login'
+	get '/login', to: 'static_pages#login'
 
-	# get '/help', to: 'static_pages#help'
+	get '/help', to: 'static_pages#help'
 
-	# get '/about', to: 'static_pages#about'
+	get '/about', to: 'static_pages#about'
 
-	# get '/contact', to: 'static_pages#contact'
+	get '/contact', to: 'static_pages#contact'
 
-	# get '/signup', to: 'static_pages#signup'
+	get '/signup', to: 'static_pages#signup'
 
-	# get 'welcome/index'
+	get 'welcome/index'
+
+	resources :users
+	resources :microposts
 
 end
