@@ -1,5 +1,57 @@
 <%= provide(:title, @user.name) %>
-<h1>
-	<%= gravatar_for @user %>
-	<%= @user.name  %>
-</h1>
+
+<!--  -->
+<div class="row">
+	<div class="col-4">
+		<%= gravatar_for @user %>
+	</div>
+
+	<div class="col-8">
+		<h1 class="name"><%= @user.name %></h1>
+		<%= link_to 'Write your description Here' %>
+		<p class="description">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo he
+		</p>
+	</div>
+	
+</div>
+
+<hr>
+
+<!-- Microposts Panel -->
+<div class="row">
+	<div class="col-4">
+		<div class="info">
+			Followers:<label class="followers">4</label>
+		</div>
+		<div class="info">
+			Following:<label class="following">4</label>
+		</div>
+	</div>
+
+	<div class="col-8">
+		<h1><%= "Micropost".pluralize(3) %><span>(3)</span></h1>
+		
+		<div class="post">
+			<p class="content">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris entum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
+			</p>
+			<p class="post-date">Posted <span><%= posted_ago(@user) %></span> <%= "Day".pluralize(posted_ago(@user)) %> ago</p>
+		</div>
+
+		<div class="post">
+			<p class="content">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris entum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
+			</p>
+			<p class="post-date">Posted <span><%= posted_ago(@user) %></span> <%= "Day".pluralize(posted_ago(@user)) %> ago</p>
+		</div>
+
+		<div class="post">
+			<p class="content">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris entum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
+			</p>
+			<p class="post-date">Posted <span><%= posted_ago(@user) %></span> <%= "Day".pluralize(posted_ago(@user)) %> ago</p>
+		</div>
+	</div>
+	
+</div>
