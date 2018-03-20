@@ -114,11 +114,8 @@ nav a:hover {
 
 footer {
   text-decoration: none;
-}
-
-footer {
-  position: absolute;
-  bottom: 0px;
+  // position: absolute;
+  // bottom: 0px;
 }
 
 /* Add a hover effect if you want */
@@ -165,14 +162,9 @@ footer #social-ig:hover {
 
 // login form
 // 
-
 .signin {
-  position: absolute;
-  left: 50%;
-  top: 45%;
-  transform: translate(-50%, -50%);
+  margin: 160px;
 }
-
 
 :root {
   --input-padding-x: .75rem;
