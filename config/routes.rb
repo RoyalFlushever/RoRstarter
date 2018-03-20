@@ -29,7 +29,8 @@ Rails.application.routes.draw do
 
 	get '/contact', to: 'static_pages#contact'
 
-	get '/signup', to: 'static_pages#signup'
+	get '/signup', to: 'users#new'
+	post '/signup', to: 'users#create'
 
 	get 'welcome/index'
 
