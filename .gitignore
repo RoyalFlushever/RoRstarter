@@ -19,3 +19,9 @@
 .byebug_history
 
 /spring/*.pid
+
+# Ignore bundle cached
+/vendor/bundle
+
+# Assets
+/public/assets
