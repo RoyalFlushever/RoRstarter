@@ -15,7 +15,8 @@ class UsersController < ApplicationController
   	@user = User.new(user_params)
 
   	if @user.save
-  		redirect_to home_path, {notice: 'Welcome!'}	
+  		flash[:success] = "Welcome to our RoR APP!"	
+  		redirect_to @user	
   	else
   		render 'new'
   	end
