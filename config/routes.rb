@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
  
+  get 'new/sessions'
+
+  get 'new/new'
+
+  get 'sessions/new'
+
   # get 'auth/:provider/callback', to: 'sessions#create'
   # get 'auth/failure', to: redirect('/')
   # get 'signout', to: 'sessions#destroy', as: 'signout'
@@ -7,11 +13,7 @@ Rails.application.routes.draw do
   # resources :sessions, only: [:create, :destroy]
   # resource :home, only: [:show]
 
-  root to: 'static_pages#login'
-
-  get 'sessions/create'
-
-  get 'sessions/destroy'
+  root to: 'sessions#new'
 
   get 'home/show'
 
@@ -21,8 +23,6 @@ Rails.application.routes.draw do
 	
 	get '/home', to: 'static_pages#home'
 
-	get '/login', to: 'static_pages#login'
-
 	get '/help', to: 'static_pages#help'
 
 	get '/about', to: 'static_pages#about'
@@ -31,6 +31,11 @@ Rails.application.routes.draw do
 
 	get '/signup', to: 'users#new'
 	post '/signup', to: 'users#create'
+
+	get 'login', to: 'sessions#new'
+	post 'login', to: 'sessions#create'
+
+	delete 'logout', to: 'sessions#destroy'
 
 	get 'welcome/index'
 

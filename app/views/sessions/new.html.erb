@@ -1,0 +1,36 @@
+<% provide(:title, "Sign in") %>
+<div class="signin">
+  <div class="form-signin my-auto">
+
+    <div class="text-center social-login mb-4">
+      <a class="btn btn-facebook mb-2" href="#">
+        <span class="fa fa-facebook mr-2"></span> Log in with facebook
+      </a>
+      <a class="btn btn-google mb-3 mb-md-4" href="#">
+        <span class="fa fa-google-plus mr-2"></span> Log in with Google
+      </a>
+      <p class="over">OR</p>
+    </div>
+    
+    <%= form_for(:session, url: login_path) do |f| %>
+      <div class="form-label-group">
+        <%= f.email_field :email, id: "inputEmail", class: "form-control", placeholder: "Email address", required: true %>
+        <%= f.label :email %>
+      </div>
+
+      <div class="form-label-group">
+        <%= f.password_field :password, id: "inputPassword", class: "form-control", placeholder: "Password", required: true %>
+        <%= f.label :password %> 
+      </div>
+
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+      <%= f.submit "Log In", class: "btn btn-lg btn-primary btn-block" %> 
+    <% end %>
+    
+    <p class="pull-left mr-2">New User?</p> <%= link_to 'Sign Up now!', signup_path %>
+  </div>
+</div>

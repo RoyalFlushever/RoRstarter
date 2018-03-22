@@ -1,12 +1,24 @@
 class SessionsController < ApplicationController
+  
   def create
-  	customer = Customer.from_omniauth(request.env["omniauth.auth"])
-  	session[:customer_id] = customer.id
-  	redirect_to root_path
+
+  	user = User.find_by email: params[:session][:email].downcase
+  	if user && user.authenticate(params[:session][:password])
+      log_in user
+  		redirect_to current_user
+  	else
+      flash.now[:danger] = 'Invalid email/password combination' 
+  		render 'new'	
+    end
+  	
   end
 
   def destroy
-  	session[:customer_id] = nil
+    log_out 
   	redirect_to root_path
   end
+
+  def new
+  end
+
 end
